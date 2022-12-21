@@ -3,7 +3,7 @@ import { Component } from 'react';
 
 class ColorPicker extends Component {
     state = {
-        activeOptionIdx: 2,
+        activeOptionIdx: 0,
     }
 
     setActiveIdx = (index) => {
@@ -21,7 +21,9 @@ class ColorPicker extends Component {
     }
         
     render() {
-        const { label } = this.props.options[this.state.activeOptionIdx];
+        const { activeOptionIdx } = this.state;
+        const { options } = this.props;
+        const { label } = options[activeOptionIdx];
         
         return (
             <div className={css.container}>
