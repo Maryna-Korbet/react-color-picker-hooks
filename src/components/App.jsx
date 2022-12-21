@@ -10,7 +10,8 @@ export const App = () => {
     { label: 'grey', color: '#607D8B' },
     { label: 'pink', color: '#E91E63' },
     { label: 'indigo', color: '#3F51B5' },
-    ]
+    { label: 'yellow', color: '#FFFF00' },
+  ]
   
   return (
     <div
@@ -20,7 +21,7 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
       <ColorPicker
