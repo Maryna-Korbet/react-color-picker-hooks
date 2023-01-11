@@ -3,10 +3,6 @@ import css from 'components/ColorPicker/ColorPicker.module.css';
 
 export default function ColorPicker({ options }) {
     const [activeOptionIdx, setActiveOptionIdx] = useState(0);
-    
-    const setActiveIdx = index => {
-        setActiveOptionIdx(index);
-    }
 
     return (
             <div className={css.container}>
@@ -18,7 +14,7 @@ export default function ColorPicker({ options }) {
                                 key={label}
                                 className={this.makeOptionClassName(index)}
                                 style={{ backgroundColor: color }}
-                                onClick={() => this.setActiveIdx(index)}
+                                onClick={() => setActiveOptionIdx(index)}
                             >
                             </button>
                     ))}
