@@ -1,7 +1,8 @@
-import {} from 'react';
+import {useState} from 'react';
 import css from 'components/ColorPicker/ColorPicker.module.css';
 
-export default function ColorPicker({options}) {
+export default function ColorPicker({ options }) {
+    const [activeOptionIdx, setActiveOptionIdx] = useState(0);
     return (
             <div className={css.container}>
                 <h2 className={css.title}>Color Picker</h2>
@@ -24,9 +25,9 @@ export default function ColorPicker({options}) {
 
 
 class ColorPicker extends Component {
-    state = {
-        activeOptionIdx: 0,
-    }
+    // state = {
+    //     activeOptionIdx: 0,
+    // }
 
     setActiveIdx = (index) => {
         this.setState({ activeOptionIdx: index });
