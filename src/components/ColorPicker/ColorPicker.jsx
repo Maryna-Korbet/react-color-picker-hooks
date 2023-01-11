@@ -4,10 +4,12 @@ import css from 'components/ColorPicker/ColorPicker.module.css';
 export default function ColorPicker({ options }) {
     const [activeOptionIdx, setActiveOptionIdx] = useState(0);
 
+    const { label } = options[activeOptionIdx];
+
     return (
             <div className={css.container}>
                 <h2 className={css.title}>Color Picker</h2>
-                <p>Selected color:{options[activeOptionIdx].label}</p>
+                <p>Selected color:{label}</p>
                 <div>
                     {this.props.options.map(({ label, color }, index) => (                       
                             <button
