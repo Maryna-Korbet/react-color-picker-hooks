@@ -6,6 +6,10 @@ export default function ColorPicker({ options }) {
 
     const { label } = options[activeOptionIdx];
 
+    const makeOptionClassName = index => {
+        return index === activeOptionIdx ? styles.activeOption : styles.option;
+    }
+
     return (
             <div className={css.container}>
                 <h2 className={css.title}>Color Picker</h2>
@@ -14,7 +18,7 @@ export default function ColorPicker({ options }) {
                     {this.props.options.map(({ label, color }, index) => (                       
                             <button
                                 key={label}
-                                className={this.makeOptionClassName(index)}
+                                className={makeOptionClassName(index)}
                                 style={{ backgroundColor: color }}
                                 onClick={() => setActiveOptionIdx(index)}
                             >
@@ -36,15 +40,15 @@ class ColorPicker extends Component {
     //     this.setState({ activeOptionIdx: index });
     // }
 
-    makeOptionClassName = (index) => {
-        const optionClasses = [css.option];
+    // makeOptionClassName = (index) => {
+    //     const optionClasses = [css.option];
 
-        if (index === this.state.activeOptionIdx) {
-            optionClasses.push(css.optionActive);
-        }
+    //     if (index === this.state.activeOptionIdx) {
+    //         optionClasses.push(css.optionActive);
+    //     }
 
-        return optionClasses.join(' ');
-    }
+    //     return optionClasses.join(' ');
+    // }
         
     render() {
         // const { activeOptionIdx } = this.state;
