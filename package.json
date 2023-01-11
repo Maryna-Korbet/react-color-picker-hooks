@@ -1,8 +1,8 @@
 {
-  "name": "react-color-picker-hooks",
+  "name": "react-hooks-color-picker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Maryna-Korbet.github.io/react-color-picker-hooks/",
+  "homepage": "https://Maryna-Korbet.github.io/react-hooks-color-picker/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
