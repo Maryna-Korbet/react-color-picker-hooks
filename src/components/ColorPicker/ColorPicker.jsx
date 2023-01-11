@@ -3,6 +3,11 @@ import css from 'components/ColorPicker/ColorPicker.module.css';
 
 export default function ColorPicker({ options }) {
     const [activeOptionIdx, setActiveOptionIdx] = useState(0);
+    
+    const setActiveIdx = index => {
+        setActiveOptionIdx(index);
+    }
+
     return (
             <div className={css.container}>
                 <h2 className={css.title}>Color Picker</h2>
@@ -29,9 +34,9 @@ class ColorPicker extends Component {
     //     activeOptionIdx: 0,
     // }
 
-    setActiveIdx = (index) => {
-        this.setState({ activeOptionIdx: index });
-    }
+    // setActiveIdx = (index) => {
+    //     this.setState({ activeOptionIdx: index });
+    // }
 
     makeOptionClassName = (index) => {
         const optionClasses = [css.option];
