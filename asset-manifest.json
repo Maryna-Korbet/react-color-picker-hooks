@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-hooks-color-picker/static/css/main.82ef52e1.css",
+    "main.js": "/react-hooks-color-picker/static/js/main.23a7a231.js",
+    "index.html": "/react-hooks-color-picker/index.html",
+    "main.82ef52e1.css.map": "/react-hooks-color-picker/static/css/main.82ef52e1.css.map",
+    "main.23a7a231.js.map": "/react-hooks-color-picker/static/js/main.23a7a231.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82ef52e1.css",
+    "static/js/main.23a7a231.js"
+  ]
+}
