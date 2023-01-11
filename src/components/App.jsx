@@ -1,6 +1,7 @@
 import ColorPicker from "components/ColorPicker/ColorPicker";
 
 export const App = () => {
+
   const colorPickerOptions = 
   [
     { label: 'red', color: '#F44336' },
@@ -11,6 +12,7 @@ export const App = () => {
     { label: 'indigo', color: '#3F51B5' },
     { label: 'yellow', color: '#FFFF00' },
   ]
+  
  return (
     <div
       style={{

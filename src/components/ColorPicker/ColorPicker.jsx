@@ -1,4 +1,3 @@
-
 import {useState} from 'react';
 import css from 'components/ColorPicker/ColorPicker.module.css';
 
