@@ -7,7 +7,7 @@ export default function ColorPicker({ options }) {
     return (
             <div className={css.container}>
                 <h2 className={css.title}>Color Picker</h2>
-                <p>Selected color:{label}</p>
+                <p>Selected color:{options[activeOptionIdx].label}</p>
                 <div>
                     {this.props.options.map(({ label, color }, index) => (                       
                             <button
@@ -45,9 +45,9 @@ class ColorPicker extends Component {
     }
         
     render() {
-        const { activeOptionIdx } = this.state;
-        const { options } = this.props;
-        const { label } = options[activeOptionIdx];
+        // const { activeOptionIdx } = this.state;
+        // const { options } = this.props;
+        // const { label } = options[activeOptionIdx];
         
         // return (
         //     <div className={css.container}>
