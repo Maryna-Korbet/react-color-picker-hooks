@@ -1,5 +1,27 @@
+import {} from 'react';
 import css from 'components/ColorPicker/ColorPicker.module.css';
-import { Component } from 'react';
+
+export default function ColorPicker({options}) {
+    return (
+            <div className={css.container}>
+                <h2 className={css.title}>Color Picker</h2>
+                <p>Selected color:{label}</p>
+                <div>
+                    {this.props.options.map(({ label, color }, index) => (                       
+                            <button
+                                key={label}
+                                className={this.makeOptionClassName(index)}
+                                style={{ backgroundColor: color }}
+                                onClick={() => this.setActiveIdx(index)}
+                            >
+                            </button>
+                    ))}
+                </div>
+            </div>
+        );
+}
+
+
 
 class ColorPicker extends Component {
     state = {
@@ -25,23 +47,23 @@ class ColorPicker extends Component {
         const { options } = this.props;
         const { label } = options[activeOptionIdx];
         
-        return (
-            <div className={css.container}>
-                <h2 className={css.title}>Color Picker</h2>
-                <p>Selected color:{label}</p>
-                <div>
-                    {this.props.options.map(({ label, color }, index) => (                       
-                            <button
-                                key={label}
-                                className={this.makeOptionClassName(index)}
-                                style={{ backgroundColor: color }}
-                                onClick={() => this.setActiveIdx(index)}
-                            >
-                            </button>
-                    ))}
-                </div>
-            </div>
-        );
+        // return (
+        //     <div className={css.container}>
+        //         <h2 className={css.title}>Color Picker</h2>
+        //         <p>Selected color:{label}</p>
+        //         <div>
+        //             {this.props.options.map(({ label, color }, index) => (                       
+        //                     <button
+        //                         key={label}
+        //                         className={this.makeOptionClassName(index)}
+        //                         style={{ backgroundColor: color }}
+        //                         onClick={() => this.setActiveIdx(index)}
+        //                     >
+        //                     </button>
+        //             ))}
+        //         </div>
+        //     </div>
+        // );
     }
 }
 
